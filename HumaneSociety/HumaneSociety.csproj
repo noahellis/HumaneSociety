@@ -43,8 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdoptionCenter.cs" />
+    <Compile Include="Animal.cs" />
+    <Compile Include="AnimalContainer.cs" />
+    <Compile Include="Cat.cs" />
+    <Compile Include="CatPerson.cs" />
+    <Compile Include="Dog.cs" />
+    <Compile Include="DogPerson.cs" />
+    <Compile Include="Dragon.cs" />
+    <Compile Include="DragonPen.cs" />
+    <Compile Include="DragonPerson.cs" />
+    <Compile Include="Iguana.cs" />
+    <Compile Include="IguanaPerson.cs" />
+    <Compile Include="LargeCage.cs" />
+    <Compile Include="MediumCage.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmallCage.cs" />
+    <Compile Include="Terrarium.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

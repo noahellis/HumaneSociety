@@ -8,8 +8,10 @@ namespace HumaneSociety
 {
     class Program
     {
+        UserInterface runProgram = new UserInterface();
         static void Main(string[] args)
         {
+            
         }
     }
 }

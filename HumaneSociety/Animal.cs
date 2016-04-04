@@ -10,10 +10,16 @@ namespace HumaneSociety
     {
         //put either tryParse/tryInt or try catch for user input
         public string animalName;
-        public int animalAge;
+        public double animalAge;
         public double adoptionPrice;
         public double weeklyPoundsFood;
         Person personInfo; 
+        public  Animal()
+        {
+            animalName = GetAnimalName();
+            animalAge = GetAnimalAge();
+            adoptionPrice = SetAdoptionPrice();
+        }
              
         public string GetAnimalName()
         {
@@ -22,10 +28,10 @@ namespace HumaneSociety
             return animalName;
         }
 
-        public int GetAnimalAge()
+        public double GetAnimalAge()
         {
-            Console.WriteLine("Enter estimated age of Animal:");
-            animalAge = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter estimated age of Animal in years:");
+            animalAge = double.Parse(Console.ReadLine());
             return animalAge;
         }
 
@@ -35,14 +41,5 @@ namespace HumaneSociety
             adoptionPrice = double.Parse(Console.ReadLine());
             return adoptionPrice;
         }
-
-        public void DetermineWeeklyNeededFood()
-        {
-            
-            
-        }
-
-    }
-
-    
+    }    
 }

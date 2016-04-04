@@ -13,12 +13,15 @@ namespace HumaneSociety
         string catTemperament;
         bool catHasShots;
 
-        public Cat (string animalName, int animalAge, double adoptionPrice, double weeklyPoundsFood, string catBreed,  string catTeperament, bool catHasShots)
-        {
+        public Cat ()
+        {            
             weeklyPoundsFood = 2.0;
+            catBreed = InputCatBreed();
+            catTemperament = GetCatTemperament();
+            catHasShots = CheckCatShots();
         }
 
-        public string InputCatcolorPattern()
+        public string InputCatBreed()
         {
             Console.WriteLine("Please input Cat's Breed");
             catBreed = Console.ReadLine();

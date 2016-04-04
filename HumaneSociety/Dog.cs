@@ -13,9 +13,31 @@ namespace HumaneSociety
         string dogSize;
         string dogTemperament;
         bool dogHasShots;
-        public Dog (string animalName, int animalAge, double adoptionPrice, double weeklyPoundsFood, string dogBreed, string dogSize, string dogTemperament)            
+        public Dog ()            
         {
-
+            dogSize = InputDogSize();            
+            weeklyPoundsFood = DetermineFoodNeededForSize();
+            dogBreed = InputDogBreed();
+            dogTemperament = GetDogTemprament();
+        }      
+        public double DetermineFoodNeededForSize()
+        {
+            if (dogSize.Equals ("small", StringComparison.CurrentCultureIgnoreCase))
+            {
+                weeklyPoundsFood = 3.0;
+                Console.WriteLine("This dog needs {0} pounds of food a week.", weeklyPoundsFood);
+            }
+            else if (dogSize.Equals ("medium", StringComparison.CurrentCultureIgnoreCase))
+            {
+                weeklyPoundsFood = 6.0;
+                Console.WriteLine("This dog needs {0} pounds of food a week.", weeklyPoundsFood);
+            }
+            else if (dogSize.Equals ("Large", StringComparison.CurrentCultureIgnoreCase))
+            {
+                weeklyPoundsFood = 10.0;
+                Console.WriteLine("This dog needs {0} pounds of food a week.", weeklyPoundsFood);
+            }
+            return weeklyPoundsFood;
         }
         public string InputDogBreed()
         {
@@ -34,6 +56,7 @@ namespace HumaneSociety
         public string GetDogTemprament()
         {
             Console.WriteLine("Please enter the Dog's Temprament (Calm, Active, or Aggressive)");
+            dogTemperament = Console.ReadLine();
             return dogTemperament;
         }
 

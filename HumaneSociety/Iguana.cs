@@ -8,21 +8,28 @@ namespace HumaneSociety
 {
     class Iguana : Animal
     {
+        
         string iguanaColor;
-        string iguanaSize;
+        string iguanaLifeStage;
 
-        public Iguana (string animalName, int animalAge, double adoptionPrice, double weeklyPoundsFood, string iguanaColor, string iguanaSize)
-        {
-
-        }
+        public Iguana ()
+        {            
+            iguanaLifeStage = InputIguanaLifeStage();
+            iguanaColor = InputIguanaColor();
+            weeklyPoundsFood = .3;
+        }      
         public string InputIguanaColor()
         {
+            Console.WriteLine("Please input the Color of the Iguana");
+            iguanaColor = Console.ReadLine();
             return iguanaColor;
         }
 
-        public string InputIguanaSize()
+        public string InputIguanaLifeStage()
         {
-            return iguanaSize;
+            Console.WriteLine("Please enter the life stage of the iguana. (Juvenile or Adult)");
+            iguanaLifeStage = Console.ReadLine();
+            return iguanaLifeStage;
         }
     }
 }

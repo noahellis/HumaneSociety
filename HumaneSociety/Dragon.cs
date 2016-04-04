@@ -8,19 +8,17 @@ namespace HumaneSociety
 {
     class Dragon : Animal
     {
-        int dragonPower;
         string dragonTemperament;
-        public Dragon (string animalName, int animalAge, double adoptionPrice, double weeklyPoundsFood, int dragonPower, string dragonTEmperament)
-        {
-
-        }
-        public int InputDragonPower()
-        {
-            return dragonPower;
-        }
+        public Dragon ()
+        {           
+            weeklyPoundsFood = 200;
+            dragonTemperament = InputDragonTemperament();
+        }      
 
         public string InputDragonTemperament()
         {
+            Console.WriteLine("Please input the dragon Temperament: (Fiery, Smoldering, Ashen");
+            dragonTemperament = Console.ReadLine();
             return dragonTemperament;
         }
     }

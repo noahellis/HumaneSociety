@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HumaneSociety
 {
-    abstract class AnimalContainer
+    public abstract class AnimalContainer
     {
         Animal animalCages;
         public bool isOccupied;

@@ -12,7 +12,7 @@ namespace HumaneSociety
         public SmallCage()
         {
             size = 10;
-            number = 30;
+            number = 40;
         }
     }
 }

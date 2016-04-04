@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace HumaneSociety
 {
-    abstract class Animal
+    public abstract class Animal
     {
         //put either tryParse/tryInt or try catch for user input
         public string animalName;
         public int animalAge;
         public double adoptionPrice;
-        public double weeklyPoundsFood;      
+        public double weeklyPoundsFood;
+        Person personInfo; 
              
         public string GetAnimalName()
         {
@@ -35,10 +36,10 @@ namespace HumaneSociety
             return adoptionPrice;
         }
 
-        public double DetermineWeeklyNeededFood()
+        public void DetermineWeeklyNeededFood()
         {
-            //set amount per size of animal??
-            return weeklyPoundsFood;
+            
+            
         }
 
     }

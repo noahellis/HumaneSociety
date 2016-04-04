@@ -27,7 +27,7 @@ namespace HumaneSociety
 
         public void StartInterface()
         {
-            Console.WriteLine("Enter the following number for what you would like to do:");  
+            Console.WriteLine("Enter the following number for what you would like to do:");
             Console.WriteLine("1: Enter new Animal for Adoption");
             Console.WriteLine("2: Enter new Adopting Person");
             Console.WriteLine("3: Perfom Adoption");
@@ -36,12 +36,45 @@ namespace HumaneSociety
             Console.WriteLine("6: Check for weekly food needed");
             Console.WriteLine("7: Print list of current Animals in Shelter");
             Console.WriteLine("8: Exit Program");
+            activateInterface();
+        }
 
+        public void activateInterface()
+        {
             int choice = int.Parse(Console.ReadLine());
-            //switch case for choice input
+
+            switch (choice)
+            {
+                case 1:
+                    AddAnimal();
+                    break;
+                case 2:
+                    AddPerson();
+                    break;
+                case 3:
+                    AdoptAnimal();
+                    break;
+                case 4:
+                    //remove person from list
+                    break;
+                case 5:
+                    //check cage availability
+                    break;
+                case 6:
+                    //check for weekly food
+                    break;
+                case 7:
+                    //print list of animals in shelter
+                    break;
+                case 8:
+                    Environment.Exit(0);
+                    break;
+            }
+        }
+           
 
         }
 
 
     }
-}
+

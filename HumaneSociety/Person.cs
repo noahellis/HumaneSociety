@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace HumaneSociety
 {
-    abstract class Person
-    {
-        Random animalPreference = new Random();
+    public abstract class Person
+    {        
         public string name;
-        public int age;
+        public string preferredAnimal;        
         public string occupation;
         public string homeType;
         public bool hasMoneyForAdoption;
         public bool adopt;
+        public int age;
 
         public string InputPersonName()
         {
@@ -44,42 +44,19 @@ namespace HumaneSociety
             return homeType;
         }
 
-        public void TestAnimalPreference()
+        public string InputAnimalPreference()
         {
-            //adjust if necessary
-            int randomAnimal = animalPreference.Next(0, 100);
-            if (randomAnimal <= 20)
-            {
-                //cat
-            }
-            if (randomAnimal <40 && randomAnimal >= 21)
-            {
-                //small dog
-            }
-
-            if (randomAnimal <60 && randomAnimal >= 41)
-            {
-                //medium dog
-            }
-
-            if (randomAnimal <61 && randomAnimal >= 80)
-            {
-                //large dog
-            }
-            if (randomAnimal <81 && randomAnimal >= 90)
-            {
-                //iguana
-            }
-            if (randomAnimal < 90)
-            {
-                //dragon
-            }
+            Console.WriteLine("Please enter the Animal Preference for the person making Adoption");
+            Console.WriteLine("Choices:Cat, Dog, Iguana, Dragon");
+            preferredAnimal = Console.ReadLine();
+            return preferredAnimal;
 
         }
 
         public bool AdoptAnimal()
         {
             //if all conditions are met then they can adopt animal in question
+            RemoveAnimalFromList();
             return adopt;
         }
 

@@ -14,7 +14,7 @@ namespace HumaneSociety
 
         public void AddAdoptionList()
         {
-            //animalAdoptionList.Add();
+            //here is where to start. figure out how to add new user inputted people/animals to the list
         }
 
         public void RemoveAdoptionList()

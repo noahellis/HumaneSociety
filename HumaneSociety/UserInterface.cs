@@ -8,21 +8,18 @@ namespace HumaneSociety
 {
     class UserInterface
     {
-        
         AdoptionCenter runInterface;
         public void AddPerson()
         {
-
+            
         }
 
         public void AddAnimal()
         {
-
         }
 
         public void AdoptAnimal()
         {
-
         }
 
         public void StartInterface()
@@ -42,7 +39,6 @@ namespace HumaneSociety
         public void activateInterface()
         {
             int choice = int.Parse(Console.ReadLine());
-
             switch (choice)
             {
                 case 1:
@@ -71,10 +67,5 @@ namespace HumaneSociety
                     break;
             }
         }
-           
-
-        }
-
-
     }
-
+}

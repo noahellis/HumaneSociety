@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace HumaneSociety
 {
     public abstract class Person
-    {        
+    {
         public string name;
-        public string preferredAnimal;        
+        public string preferredAnimal;
         public string occupation;
-        public string homeType;        
+        public string homeType;
         public bool adopted;
         public int age;
         public int choice;
@@ -22,8 +22,8 @@ namespace HumaneSociety
             occupation = InputPersonOccupation();
             homeType = GetHomeType();
             age = InputPersonAge();
-
         }
+
         public string InputPersonName()
         {
             Console.WriteLine("Please enter the Name of the person making Adoption:");
@@ -69,6 +69,7 @@ namespace HumaneSociety
                     Console.WriteLine("Sorry, you have entered an invalid entry. Please try again.");
                     return GetHomeType();
             }
+
             return homeType;
         }
 
@@ -95,8 +96,8 @@ namespace HumaneSociety
                     Console.WriteLine("Sorry, you have entered an invalid entry. Please try again.");
                     return InputAnimalPreference();
             }
-            return preferredAnimal;
 
+            return preferredAnimal;
         }
 
         public bool AdoptAnimal()
@@ -108,7 +109,6 @@ namespace HumaneSociety
 
         public void RemoveAnimalFromList()
         {
-
         }
     }
 }

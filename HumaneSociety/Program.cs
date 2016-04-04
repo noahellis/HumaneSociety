@@ -11,7 +11,7 @@ namespace HumaneSociety
         UserInterface runProgram = new UserInterface();
         static void Main(string[] args)
         {
-            DogPerson testDogPerson = new DogPerson();
+            
             Console.ReadKey();
         }
     }

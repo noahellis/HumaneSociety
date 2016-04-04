@@ -22,6 +22,7 @@ namespace HumaneSociety
             hasSpaceForDog = TestSpaceForApartment();            
             likesDogs = TestLikesDogs();
             hasDogAllergy = TestDogAllergy();
+            
         }
         public bool TestSpaceForApartment()
         {
@@ -44,8 +45,7 @@ namespace HumaneSociety
                 TestSpaceForDuplex();
             }       
             return hasSpaceForDog;
-        }
-     
+        }    
             
         public bool TestSpaceForDuplex()
         {
@@ -147,6 +147,10 @@ namespace HumaneSociety
                     return GetDesiredSize();
             }
             return desiredSize;
+        }
+        public void AddDogPersonToList()
+        {
+            
         }
     }
 }

@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace HumaneSociety
 {
-    class Cat : Animal
+    public class Cat : Animal
     {
         string choice;
         string catBreed;
         string catTemperament;
         bool catHasShots;
+        
 
         public Cat ()
         {            
@@ -19,6 +20,7 @@ namespace HumaneSociety
             catBreed = InputCatBreed();
             catTemperament = GetCatTemperament();
             catHasShots = CheckCatShots();
+           
         }
 
         public string InputCatBreed()

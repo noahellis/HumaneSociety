@@ -17,6 +17,7 @@ namespace HumaneSociety
             hasTerrarium = TestHasTerrarium();
             hasIguanaCareKnowledge = TestHasIguanaCareKnowledge();
             desiredIguanaColor = GetDesiredIguanaColor();
+            preferredAnimal = "Iguanas";
         }
 
         public bool TestHasTerrarium()

@@ -13,7 +13,10 @@ namespace HumaneSociety
         public double animalAge;
         public double adoptionPrice;
         public double weeklyPoundsFood;
-        Person personInfo; 
+        public List<Dog> dogList = new List<Dog>();
+        public List<Cat> catList = new List<Cat>();
+        public List<Iguana> iguanaList = new List<Iguana>();
+        public List<Dragon> dragonList = new List<Dragon>();
         public  Animal()
         {
             animalName = GetAnimalName();

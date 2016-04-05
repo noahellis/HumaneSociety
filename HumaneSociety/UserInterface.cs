@@ -9,11 +9,64 @@ namespace HumaneSociety
     class UserInterface
     {
         AdoptionCenter runInterface;
-        public void AddPerson()
+        public UserInterface()
         {
-            
+            runInterface = new AdoptionCenter();
         }
+        public string preferredAnimal;
+        
+        public void AddDogPerson()
+        {
+            Person dogPerson = new DogPerson();
+            runInterface.adopterList.Add(dogPerson);
+        }
+        public void AddCatPerson()
+        {
+            Person catPerson = new CatPerson();
+            runInterface.adopterList.Add(catPerson);
+        }
+        public void AddIguanaPerson()
+        {
+            Person iguanaPerson = new IguanaPerson();
+            runInterface.adopterList.Add(iguanaPerson);
+        }
+        public void AddDragonPerson()
+        {
+            Person dragonPerson = new DragonPerson();
+            runInterface.adopterList.Add(dragonPerson);
+        }
+        public string PickPreferredAnimal()
+        {       
+            Console.WriteLine("Please enter the Animal Preference for the person making Adoption");
+            Console.WriteLine("1=Cat, 2=Dog, 3=Iguana, 4=Dragon");
+            int choice =int.Parse(Console.ReadLine());
+            switch (choice)
+            {
+                //make these start constructor
+                case 1:
+                    preferredAnimal = "cat";
+                    AddCatPerson();
+                    break;
+                case 2:
+                    preferredAnimal = "dog";
+                    AddDogPerson();
+                    break;
+                case 3:
+                    preferredAnimal = "iguana";
+                    AddIguanaPerson();
+                    break;
+                case 4:
+                    preferredAnimal = "dragon";
+                    AddDragonPerson();
+                    break;
+                default:
+                    Console.WriteLine("Sorry, you have entered an invalid entry. Please try again.");
+                    return PickPreferredAnimal();
+            }
 
+            return preferredAnimal;
+        }
+    
         public void AddAnimal()
         {
         }
@@ -24,10 +77,10 @@ namespace HumaneSociety
 
         public void StartInterface()
         {
-            Console.WriteLine("Enter the following number for what you would like to do:");
+            Console.WriteLine("Enter the number that corresponds with what you would like to do:");
             Console.WriteLine("1: Enter new Animal for Adoption");
             Console.WriteLine("2: Enter new Adopting Person");
-            Console.WriteLine("3: Perfom Adoption");
+            Console.WriteLine("3: Perform Adoption");
             Console.WriteLine("4: Remove Adopting Person from list");
             Console.WriteLine("5: Check available Animal Container space");
             Console.WriteLine("6: Check for weekly food needed");
@@ -45,7 +98,7 @@ namespace HumaneSociety
                     AddAnimal();
                     break;
                 case 2:
-                    AddPerson();
+                    PickPreferredAnimal();
                     break;
                 case 3:
                     AdoptAnimal();

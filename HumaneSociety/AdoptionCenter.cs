@@ -8,23 +8,26 @@ namespace HumaneSociety
 {
     class AdoptionCenter
     {
-        List<Animal> animalAdoptionList = new List<Animal>();
-        List<Person> adopterList = new List<Person>();
-        bool isAdopted;
+        public Animal animalInterface;
+        public Person personInterface;
 
-        public void AddAdoptionList()
+        public List<Person> adopterList = new List<Person>();
+        public List<AnimalContainer> animalContainerList = new List<AnimalContainer>();
+        bool isAdopted;       
+        //add animals to cages when added, 
+        public void AddAnimalAdoptionList()
         {
-            //here is where to start. figure out how to add new user inputted people/animals to the list
+            
         }
 
-        public void RemoveAdoptionList()
+        public void RemoveAnimalAdoptionList()
         {
             //animalAdoptionList.Remove();
         }
 
         public bool AdoptAnimal()
         {
-            RemoveAdoptionList();
+            RemoveAnimalAdoptionList();
             isAdopted = true;
             return isAdopted;
         }

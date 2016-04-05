@@ -9,6 +9,7 @@ namespace HumaneSociety
     public abstract class AnimalContainer
     {
         Animal animalCages;
+        public List<Animal> animalAdoptionList = new List<Animal>();
         public bool isOccupied;
         public int size;
         public int number;

@@ -17,6 +17,7 @@ namespace HumaneSociety
             isHagrid = TestIsHagrid();
             isDragonSlayer = TestIsDragonSlayer();
             hasCastle = TestHasCastle();
+            preferredAnimal = "Dragons";
         }
         public bool TestIsHagrid()
         {

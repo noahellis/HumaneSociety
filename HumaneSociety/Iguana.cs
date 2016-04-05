@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HumaneSociety
 {
-    class Iguana : Animal
+    public class Iguana : Animal
     {
         
         string iguanaColor;

@@ -15,6 +15,7 @@ namespace HumaneSociety
         {
             likesCats = TestLikesCats();
             hasCatAllergy = TestCatAllergy();
+            preferredAnimal = "Cats";
             
         }
 

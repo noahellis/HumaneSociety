@@ -9,10 +9,10 @@ namespace HumaneSociety
     class DogPerson : Person
     {
         Random dogRandom = new Random();
-        bool likesDogs;
-        bool hasDogAllergy;
-        bool hasSpaceForDog;
-        string desiredSize;
+        public bool likesDogs;
+        public bool hasDogAllergy;
+        public bool hasSpaceForDog;
+        public string desiredSize;
         
         
         public DogPerson()
@@ -22,6 +22,7 @@ namespace HumaneSociety
             hasSpaceForDog = TestSpaceForApartment();            
             likesDogs = TestLikesDogs();
             hasDogAllergy = TestDogAllergy();
+            preferredAnimal = "Dogs";
             
         }
         public bool TestSpaceForApartment()

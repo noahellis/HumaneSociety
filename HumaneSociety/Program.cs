@@ -11,8 +11,8 @@ namespace HumaneSociety
         UserInterface runProgram = new UserInterface();
         static void Main(string[] args)
         {
-            
-            Console.ReadKey();
+            UserInterface testUserInterface = new UserInterface();
+            testUserInterface.StartInterface();
         }
     }
 }

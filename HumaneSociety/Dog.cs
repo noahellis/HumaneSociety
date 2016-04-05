@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HumaneSociety
 {
-    class Dog : Animal
+    public class Dog : Animal
     {
         string choice;
         string dogBreed;
@@ -15,11 +16,14 @@ namespace HumaneSociety
         bool dogHasShots;
         public Dog ()            
         {
+            
             dogSize = InputDogSize();            
             weeklyPoundsFood = DetermineFoodNeededForSize();
             dogBreed = InputDogBreed();
             dogTemperament = GetDogTemprament();
-        }      
+            
+        }
+        
         public double DetermineFoodNeededForSize()
         {
             if (dogSize.Equals ("small", StringComparison.CurrentCultureIgnoreCase))

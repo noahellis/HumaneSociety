@@ -17,11 +17,12 @@ namespace HumaneSociety
         public int choice;
         public Person()
         {
-            name = InputPersonName();
-            preferredAnimal = InputAnimalPreference();
+            name = InputPersonName();            
             occupation = InputPersonOccupation();
             homeType = GetHomeType();
             age = InputPersonAge();
+            
+
         }
 
         public string InputPersonName()
@@ -71,34 +72,7 @@ namespace HumaneSociety
             }
 
             return homeType;
-        }
-
-        public string InputAnimalPreference()
-        {
-            Console.WriteLine("Please enter the Animal Preference for the person making Adoption");
-            Console.WriteLine("1=Cat, 2=Dog, 3=Iguana, 4=Dragon");
-            choice = int.Parse(Console.ReadLine());
-            switch (choice)
-            {
-                case 1:
-                    preferredAnimal = "cat";
-                    break;
-                case 2:
-                    preferredAnimal = "dog";
-                    break;
-                case 3:
-                    preferredAnimal = "iguana";
-                    break;
-                case 4:
-                    preferredAnimal = "dragon";
-                    break;
-                default:
-                    Console.WriteLine("Sorry, you have entered an invalid entry. Please try again.");
-                    return InputAnimalPreference();
-            }
-
-            return preferredAnimal;
-        }
+        }        
 
         public bool AdoptAnimal()
         {

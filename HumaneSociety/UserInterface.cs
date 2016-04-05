@@ -9,11 +9,9 @@ namespace HumaneSociety
     class UserInterface
     {
         AdoptionCenter runInterface;
-        Animal newAnimal;
         public UserInterface()
         {
-            runInterface = new AdoptionCenter();            
-                   
+            runInterface = new AdoptionCenter();                               
         }
         public string preferredAnimal;
         public string animalType;

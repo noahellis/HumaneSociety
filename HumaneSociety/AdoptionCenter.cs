@@ -11,13 +11,17 @@ namespace HumaneSociety
         public Animal animalInterface;
         public Person personInterface;
         public List<Person> adopterList = new List<Person>();
-        public List<AnimalContainer> animalContainerList = new List<AnimalContainer>();
+        public List<SmallCage> smallCageList = new List<SmallCage>();
+        public List<MediumCage> mediumCageList = new List<MediumCage>();
+        public List<LargeCage> largeCageList = new List<LargeCage>();
+        public List<Terrarium> terrariumList = new List<Terrarium>();
+        public List<DragonPen> dragonPenList = new List<DragonPen>();
         public List<Dog> dogList = new List<Dog>();
         public List<Cat> catList = new List<Cat>();
         public List<Iguana> iguanaList = new List<Iguana>();
         public List<Dragon> dragonList = new List<Dragon>();
         bool isAdopted;       
-        //add animals to cages when added, 
+        
         public void AddAnimalAdoptionList()
         {
             
@@ -38,13 +42,7 @@ namespace HumaneSociety
         public void CollectFee()
         {
 
-        }
-
-        public void AddAdopterList()
-        {
-            //adopterList.Add();
-        }
-
+        } 
         public void RemoveAdopterList()
         {
             //adopterList.Remove();

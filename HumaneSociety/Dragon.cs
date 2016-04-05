@@ -13,6 +13,7 @@ namespace HumaneSociety
         {           
             weeklyPoundsFood = 200;
             dragonTemperament = InputDragonTemperament();
+            animalType = "Dragon";
         }      
 
         public string InputDragonTemperament()

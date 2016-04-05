@@ -21,7 +21,7 @@ namespace HumaneSociety
             weeklyPoundsFood = DetermineFoodNeededForSize();
             dogBreed = InputDogBreed();
             dogTemperament = GetDogTemprament();
-            
+            animalType = "Dog";
         }
         
         public double DetermineFoodNeededForSize()

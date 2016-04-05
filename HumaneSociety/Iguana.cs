@@ -17,6 +17,7 @@ namespace HumaneSociety
             iguanaLifeStage = InputIguanaLifeStage();
             iguanaColor = InputIguanaColor();
             weeklyPoundsFood = .3;
+            animalType = "Iguana";
         }      
         public string InputIguanaColor()
         {

@@ -20,6 +20,7 @@ namespace HumaneSociety
             catBreed = InputCatBreed();
             catTemperament = GetCatTemperament();
             catHasShots = CheckCatShots();
+            animalType = "Cat";
            
         }
 

@@ -14,6 +14,7 @@ namespace HumaneSociety
         public double animalAge;
         public double adoptionPrice;
         public double weeklyPoundsFood;
+        public AnimalContainer animalContainer;
        
         public  Animal()
         {

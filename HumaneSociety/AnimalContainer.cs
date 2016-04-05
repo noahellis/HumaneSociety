@@ -8,7 +8,7 @@ namespace HumaneSociety
 {
     public abstract class AnimalContainer
     {
-        Animal animalCages;        
+        public Animal animalCages;        
         public bool isOccupied;
         public int size;
         public int number;

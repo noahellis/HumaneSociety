@@ -15,5 +15,25 @@ namespace HumaneSociety
             size = 15;
             number = 20;
         }
+        public void FillOneTerrarium()
+        {
+            if (animalCages.animalType.Equals("iguana"))
+            {
+                if (number > 0)
+                {
+                    if (animalCages.animalType.Equals("Iguana", StringComparison.CurrentCultureIgnoreCase))
+                    { number -= 1; }
+                }
+                else if (number <= 0)
+                {
+                    Console.WriteLine("You do not have enough space for this Iguana.");
+                }
+            }                              
+        }
+
+        public void EmptyOneTerrarium()
+        {
+
+        }
     }
 }

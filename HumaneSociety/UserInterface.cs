@@ -77,7 +77,7 @@ namespace HumaneSociety
                     AddDogPerson();
                     break;
                 case 3:
-                    preferredAnimal = "iguana";
+                    preferredAnimal = "iguana";                    
                     AddIguanaPerson();
                     break;
                 case 4:
@@ -106,7 +106,7 @@ namespace HumaneSociety
                     AddDog();
                     break;
                 case 3:
-                    animalType = "Iguana";
+                    animalType = "Iguana";                                        
                     AddIguana();
                     break;
                 case 4:

@@ -11,21 +11,34 @@ namespace HumaneSociety
         public Animal animalInterface;
         public Person personInterface;
         public List<Person> adopterList = new List<Person>();
-        //public List<SmallCage> smallCageList = new List<SmallCage>();
-        //public List<MediumCage> mediumCageList = new List<MediumCage>(); MAKE THESE ARRAYS WITH SET MAX #
-        //public List<LargeCage> largeCageList = new List<LargeCage>();
-        //public List<Terrarium> terrariumList = new List<Terrarium>();
-        //public List<DragonPen> dragonPenList = new List<DragonPen>();
-        public List<Dog> dogList = new List<Dog>();
-        public List<Cat> catList = new List<Cat>();
-        public List<Iguana> iguanaList = new List<Iguana>();
-        public List<Dragon> dragonList = new List<Dragon>();
-        bool isAdopted;       
-        
-        public void AddAnimalAdoptionList()
+        public List<CatCage> catCageList = new List<CatCage>(new CatCage[40]);
+        public List<DogCage> dogCageList = new List<DogCage>(new DogCage[20]);
+        public List<Terrarium> terrariumList = new List<Terrarium>(new Terrarium[20]);
+        public List<DragonPen> dragonPenList = new List<DragonPen>(new DragonPen[3]);
+
+        bool isAdopted;
+
+        public void AddToSmallCage()
         {
-            
+            //mediumCageList.Add()
         }
+        public void AddToMediumCage()
+        {
+
+        }
+        public void AddToLargeCage()
+        {
+
+        }
+        public void AddToTerrarium()
+        {
+
+        }
+        public void AddToDragonPen()
+        {
+
+        }
+
 
         public void RemoveAnimalAdoptionList()
         {

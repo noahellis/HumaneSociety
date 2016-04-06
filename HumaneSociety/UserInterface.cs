@@ -15,50 +15,101 @@ namespace HumaneSociety
         }
         public string preferredAnimal;
         public string animalType;
-        
+
+        public void StartInterface()
+        {
+            Console.WriteLine("Enter the number that corresponds with what you would like to do:");
+            Console.WriteLine("1: Enter new Animal for Adoption");//done
+            Console.WriteLine("2: Enter new Adopting Person");//done
+            Console.WriteLine("3: Perform Adoption");
+            //look for false boolean in person making adoption
+            Console.WriteLine("4: Remove Adopting Person from list");
+            Console.WriteLine("5: Check available Animal Container space");
+            Console.WriteLine("6: Check for weekly food needed");
+            Console.WriteLine("7: Print list of current Animals in Shelter");
+            Console.WriteLine("8: Exit Program");//done
+            activateInterface();
+        }
+
+        public void activateInterface()
+        {
+            int choice = int.Parse(Console.ReadLine());
+            switch (choice)
+            {
+                case 1:
+                    EnterAnimalType();
+                    break;
+                case 2:
+                    PickPreferredAnimal();
+                    break;
+                case 3:
+                    AdoptAnimal();
+                    break;
+                case 4:
+                    PrintPersonList();
+                    RemovePerson();
+                    break;
+                case 5:
+                    //check cage availability
+                    break;
+                case 6:
+                    //check for weekly food
+                    break;
+                case 7:
+                    //print list of animals in shelter
+                    break;
+                case 8:
+                    Environment.Exit(0);
+                    break;
+            }
+        }
         public void AddDogPerson()
         {
             Person dogPerson = new DogPerson();
             runInterface.adopterList.Add(dogPerson);
+            AskEnterNewPerson();
         }
         public void AddCatPerson()
         {
             Person catPerson = new CatPerson();
             runInterface.adopterList.Add(catPerson);
+            AskEnterNewPerson();
         }
         public void AddIguanaPerson()
         {
             Person iguanaPerson = new IguanaPerson();
             runInterface.adopterList.Add(iguanaPerson);
+            AskEnterNewPerson();
         }
         public void AddDragonPerson()
         {
             Person dragonPerson = new DragonPerson();
             runInterface.adopterList.Add(dragonPerson);
+            AskEnterNewPerson();
         }
         public void AddCat()
         {
-            Cat cat = new Cat();
-            runInterface.catList.Add(cat);
+            CatCage catCage = new CatCage();
+            runInterface.catCageList.Add(catCage);
             AskEnterNewAnimal();
         }
         public void AddDog()
         {
-            Dog dog = new Dog();
-            runInterface.dogList.Add(dog);
+            DogCage dogCage = new DogCage();
+            runInterface.dogCageList.Add(dogCage);
             AskEnterNewAnimal();
         }
         public void AddIguana()
         {
-            Iguana iguana = new Iguana();
-            runInterface.iguanaList.Add(iguana);
+            Terrarium iguanaTerrarium = new Terrarium();
+            runInterface.terrariumList.Add(iguanaTerrarium);
             AskEnterNewAnimal();
 
         }
         public void AddDragon()
         {
-            Dragon dragon = new Dragon();
-            runInterface.dragonList.Add(dragon);
+            DragonPen dragonPen = new DragonPen();
+            runInterface.dragonPenList.Add(dragonPen);
             AskEnterNewAnimal();
         }
         public string PickPreferredAnimal()
@@ -122,7 +173,7 @@ namespace HumaneSociety
             string choice = Console.ReadLine();
             if (choice.Equals("yes", StringComparison.CurrentCultureIgnoreCase))
             {
-                EnterAnimalType();
+                PickPreferredAnimal();
             }
             else if (choice.Equals("no", StringComparison.CurrentCultureIgnoreCase))
             {
@@ -134,7 +185,7 @@ namespace HumaneSociety
                 AskEnterNewAnimal();
             }
            
-        }   
+        }
         public void AskEnterNewPerson()
         {
             Console.WriteLine("Would you like to enter another Person?");
@@ -150,59 +201,49 @@ namespace HumaneSociety
             else
             {
                 Console.WriteLine("Sorry, you have made an invalid entry. Please try again");
-                AskEnterNewPerson();
+                AskEnterNewAnimal();
             }
-        } 
+
+        }
+
 
         public void AdoptAnimal()
         {
         }
-
-        public void StartInterface()
+        public void PrintPersonList()
         {
-            Console.WriteLine("Enter the number that corresponds with what you would like to do:");
-            Console.WriteLine("1: Enter new Animal for Adoption");//done
-            Console.WriteLine("2: Enter new Adopting Person");//done
-            Console.WriteLine("3: Perform Adoption");
-            //look for false boolean in person making adoption
-            Console.WriteLine("4: Remove Adopting Person from list");
-            Console.WriteLine("5: Check available Animal Container space");
-            Console.WriteLine("6: Check for weekly food needed");
-            Console.WriteLine("7: Print list of current Animals in Shelter");
-            Console.WriteLine("8: Exit Program");
-            activateInterface();
-        }
-
-        public void activateInterface()
-        {
-            int choice = int.Parse(Console.ReadLine());
-            switch (choice)
+            
+            if (runInterface.adopterList.Equals(null))
             {
-                case 1:
-                    EnterAnimalType();
-                    break;
-                case 2:
-                    PickPreferredAnimal();
-                    break;
-                case 3:
-                    AdoptAnimal();
-                    break;
-                case 4:
-                    //remove person from list
-                    break;
-                case 5:
-                    //check cage availability
-                    break;
-                case 6:
-                    //check for weekly food
-                    break;
-                case 7:
-                    //print list of animals in shelter
-                    break;
-                case 8:
-                    Environment.Exit(0);
-                    break;
+                Console.WriteLine("No people in list");
             }
+            else
+            {
+                Console.WriteLine("Person List: ");
+                for (int adopterIndex = 0; adopterIndex <runInterface.adopterList.Count; adopterIndex ++)
+                {
+                    Console.WriteLine("{0}:{1}", runInterface.adopterList[adopterIndex], runInterface.adopterList);
+                }
+            }
+           
+           
         }
+        public void RemovePerson()
+        {
+            if (runInterface.adopterList.Equals(null))
+            {
+                Console.WriteLine("No people in list");
+                StartInterface();
+            }
+            else
+            {
+                Console.WriteLine("Please enter number next to person to remove them from the list");
+                int choice = int.Parse(Console.ReadLine());
+                runInterface.adopterList.RemoveAt(choice);
+                StartInterface();
+            }
+            
+        }
+        
     }
 }

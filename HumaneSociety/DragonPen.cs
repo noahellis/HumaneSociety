@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace HumaneSociety
 {
     class DragonPen : AnimalContainer
-    {        
-        List<AnimalContainer> dragonPen = new List<AnimalContainer>();
+    {
+        Dragon newDragon = new Dragon();
 
         public DragonPen()
         {

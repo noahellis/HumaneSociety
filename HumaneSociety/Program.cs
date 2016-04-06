@@ -13,6 +13,7 @@ namespace HumaneSociety
         {
             UserInterface testUserInterface = new UserInterface();
             testUserInterface.StartInterface();
+            Console.ReadKey();
         }
     }
 }

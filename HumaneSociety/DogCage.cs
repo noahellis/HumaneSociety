@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace HumaneSociety
 {
-    class MediumCage : AnimalContainer
+    class DogCage : AnimalContainer
     {
-        List<AnimalContainer> mediumCage = new List<AnimalContainer>();
+        Dog newDog = new Dog();
 
-        public MediumCage()
+        public DogCage()
         {
             size = 20;
             number = 20;

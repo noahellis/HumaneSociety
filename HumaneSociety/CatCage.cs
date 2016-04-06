@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace HumaneSociety
 {
-    class SmallCage : AnimalContainer
-    {        
-        List<AnimalContainer> smallCage = new List<AnimalContainer>();
-        public SmallCage()
+    class CatCage : AnimalContainer
+    {
+        Cat newCat = new Cat();
+        public CatCage()
         {
+            
+            for (int smallCageIndex = 0; smallCageIndex <= number;)
             size = 10;
             number = 40;
         }

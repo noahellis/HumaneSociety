@@ -20,8 +20,8 @@ namespace HumaneSociety
             //might have to make these flow from one function to the other, instead of calling them all here..
             desiredSize = GetDesiredSize();
             hasSpaceForDog = TestSpaceForApartment();            
-            likesDogs = TestLikesDogs();
-            hasDogAllergy = TestDogAllergy();
+            //likesDogs = TestLikesDogs();
+            //hasDogAllergy = TestDogAllergy();
             preferredAnimal = "Dogs";
             
         }
@@ -93,40 +93,40 @@ namespace HumaneSociety
             }
 
         }
-        public bool TestLikesDogs()
-        {
-            int likeDogDeterminer = dogRandom.Next(0, 50);
-            if (likeDogDeterminer <= 15)
-            {
-                Console.WriteLine("After watching this person interact with a Dog, it seems like they do not like Dogs.");
-                likesDogs = false;
+        //public bool TestLikesDogs()
+        //{
+        //    int likeDogDeterminer = dogRandom.Next(0, 50);
+        //    if (likeDogDeterminer <= 15)
+        //    {
+        //        Console.WriteLine("After watching this person interact with a Dog, it seems like they do not like Dogs.");
+        //        likesDogs = false;
                 
-            }
-            else if (likeDogDeterminer > 15)
-            {
-                Console.WriteLine("After watching this person interact with a Dog, it seems they love dogs.");
-                likesDogs = true;                          
-            }
-            return likesDogs;
-        }
+        //    }
+        //    else if (likeDogDeterminer > 15)
+        //    {
+        //        Console.WriteLine("After watching this person interact with a Dog, it seems they love dogs.");
+        //        likesDogs = true;                          
+        //    }
+        //    return likesDogs;
+        //}
 
-        public bool TestDogAllergy()
-        {
-            int hasDogAllergyDeterminer = dogRandom.Next(0, 50);
-            if (hasDogAllergyDeterminer <= 20)
-            {
-                Console.WriteLine("Shortly after interacting with a Dog, this person starts to sneeze and wheeze.");
-                Console.WriteLine("They seem to be allergic to dogs.");
-                hasDogAllergy = true;
-            }
-            else if (hasDogAllergyDeterminer > 20)
-            {
-                Console.WriteLine("This person has been interacting with a dog for a while, with no adverse effects.");
-                Console.WriteLine("They do not seem to be allergic to Dogs");
-                hasDogAllergy = false;
-            }
-            return hasDogAllergy;
-        }
+        //public bool TestDogAllergy()
+        //{
+        //    int hasDogAllergyDeterminer = dogRandom.Next(0, 50);
+        //    if (hasDogAllergyDeterminer <= 20)
+        //    {
+        //        Console.WriteLine("Shortly after interacting with a Dog, this person starts to sneeze and wheeze.");
+        //        Console.WriteLine("They seem to be allergic to dogs.");
+        //        hasDogAllergy = true;
+        //    }
+        //    else if (hasDogAllergyDeterminer > 20)
+        //    {
+        //        Console.WriteLine("This person has been interacting with a dog for a while, with no adverse effects.");
+        //        Console.WriteLine("They do not seem to be allergic to Dogs");
+        //        hasDogAllergy = false;
+        //    }
+        //    return hasDogAllergy;
+        //}
 
         public string GetDesiredSize()
         {

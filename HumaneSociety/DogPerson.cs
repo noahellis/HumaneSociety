@@ -114,9 +114,6 @@ namespace HumaneSociety
             }
             return desiredSize;
         }
-        public void AddDogPersonToList()
-        {
-            
-        }
+
     }
 }

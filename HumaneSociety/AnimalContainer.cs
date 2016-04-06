@@ -12,19 +12,7 @@ namespace HumaneSociety
         public bool isOccupied;
         public int size;
         public int number;
-        public void CheckForOpenContainer()
-        {
-           
-            if (isOccupied)
-            {
-                Console.WriteLine("This Animal Container is occupied.");
-            }
-
-            else
-            {
-                Console.WriteLine("This Animal Container is open.");
-            }
-        }
+       
 
         public bool PutAnimalIn()
         {
@@ -36,5 +24,6 @@ namespace HumaneSociety
         {
           
         }
+       
     }
 }

@@ -14,7 +14,7 @@ namespace HumaneSociety
         public int number;
         public void CheckForOpenContainer()
         {
-            //maybe move to each type of cage..
+           
             if (isOccupied)
             {
                 Console.WriteLine("This Animal Container is occupied.");
@@ -34,7 +34,7 @@ namespace HumaneSociety
 
         public void ClearCage()
         {
-            //when animal is adopted
+          
         }
     }
 }

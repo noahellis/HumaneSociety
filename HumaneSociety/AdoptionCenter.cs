@@ -16,28 +16,7 @@ namespace HumaneSociety
         public List<Terrarium> terrariumList = new List<Terrarium>(new Terrarium[20]);
         public List<DragonPen> dragonPenList = new List<DragonPen>(new DragonPen[3]);
 
-        bool isAdopted;
-
-        public void AddToSmallCage()
-        {
-            //mediumCageList.Add()
-        }
-        public void AddToMediumCage()
-        {
-
-        }
-        public void AddToLargeCage()
-        {
-
-        }
-        public void AddToTerrarium()
-        {
-
-        }
-        public void AddToDragonPen()
-        {
-
-        }
+        bool isAdopted;   
 
 
         public void RemoveAnimalAdoptionList()

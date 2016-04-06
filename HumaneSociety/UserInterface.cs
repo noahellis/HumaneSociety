@@ -23,7 +23,7 @@ namespace HumaneSociety
             Console.WriteLine("2: Enter new Adopting Person");//done
             Console.WriteLine("3: Perform Adoption");
             //look for false boolean in person making adoption
-            Console.WriteLine("4: Remove Adopting Person from list");
+            Console.WriteLine("4: Remove Adopting Person from list");//doneish, need to make it print clearer info
             Console.WriteLine("5: Check available Animal Container space");
             Console.WriteLine("6: Check for weekly food needed");
             Console.WriteLine("7: Print list of current Animals in Shelter");
@@ -222,7 +222,8 @@ namespace HumaneSociety
                 Console.WriteLine("Person List: ");
                 for (int adopterIndex = 0; adopterIndex <runInterface.adopterList.Count; adopterIndex ++)
                 {
-                    Console.WriteLine("{0}:{1}", runInterface.adopterList[adopterIndex], runInterface.adopterList);
+                    
+                    Console.WriteLine("{0}:{1}", runInterface.adopterList[adopterIndex].name, runInterface.adopterList.IndexOf(adopterIndex));
                 }
             }
            
@@ -240,6 +241,7 @@ namespace HumaneSociety
                 Console.WriteLine("Please enter number next to person to remove them from the list");
                 int choice = int.Parse(Console.ReadLine());
                 runInterface.adopterList.RemoveAt(choice);
+                Console.WriteLine("Person removed!");
                 StartInterface();
             }
             

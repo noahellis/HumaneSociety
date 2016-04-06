@@ -34,7 +34,7 @@ namespace HumaneSociety
 
         public int InputPersonAge()
         {
-            //if less than 18, print cannot adopt, restart user input
+            
             Console.WriteLine("Please enter the Age of the person making Adoption");
             age = int.Parse(Console.ReadLine());
             return age;
@@ -76,7 +76,7 @@ namespace HumaneSociety
 
         public bool AdoptAnimal()
         {
-            //if all conditions are met then they can adopt animal in question
+            
             RemoveAnimalFromList();
             return adopted;
         }

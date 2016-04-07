@@ -16,29 +16,11 @@ namespace HumaneSociety
         public List<Terrarium> terrariumList = new List<Terrarium>(new Terrarium[20]);
         public List<DragonPen> dragonPenList = new List<DragonPen>(new DragonPen[3]);
 
-        bool isAdopted;   
-
-
-        public void RemoveAnimalAdoptionList()
-        {
-            //animalAdoptionList.Remove();
-        }
-
-        public bool AdoptAnimal()
-        {
-            RemoveAnimalAdoptionList();
-            isAdopted = true;
-            return isAdopted;
-        }
-
         public void CollectFee()
         {
 
         } 
-        public void RemoveAdopterList()
-        {
-            //adopterList.Remove();
-        }
+       
         public void DisplayAllAnimals()
         {
             Console.WriteLine("Cats:");
@@ -73,7 +55,16 @@ namespace HumaneSociety
             int remainingDragonPens = 3 - dragonPenList.Count;
             Console.WriteLine("Remaining cat cages: {0}", remainingDragonPens);
         }
-    } 
+        public void DisplayNeededFood()
+        {
+            double catFood = catCageList.Count * 2;
+            double dogFood = dogCageList.Count * 6;
+            double igunaFood = terrariumList.Count * .3;
+            double dragonFood = dogCageList.Count * 200;
+            double weeklyFood = catFood + dogFood + igunaFood + dragonFood;
 
+            Console.WriteLine("You need {0} pounds of food per week.", weeklyFood);
+        }
+    }     
 
 }

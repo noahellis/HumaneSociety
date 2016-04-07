@@ -42,7 +42,8 @@ namespace HumaneSociety
                     PickPreferredAnimal();
                     break;
                 case 3:
-                    AdoptAnimal();
+                    Console.WriteLine("Sorry, this function was not completely fleshed out. Please try another.");
+                    StartInterface();
                     break;
                 case 4:
                     PrintPersonList();
@@ -52,7 +53,7 @@ namespace HumaneSociety
                     ChooseCageToCheck();
                     break;
                 case 6:
-                    //check for weekly food
+                    runInterface.DisplayNeededFood();
                     break;
                 case 7:
                     runInterface.DisplayAllAnimals();
@@ -237,6 +238,7 @@ namespace HumaneSociety
             else if (choice.Equals("no", StringComparison.CurrentCultureIgnoreCase))
             {
                 StartInterface();
+
             }
             else
             {
@@ -289,6 +291,7 @@ namespace HumaneSociety
 
         public void PrintPersonList()
         {
+            
             if (runInterface.adopterList.Equals(null))
             {
                 Console.WriteLine("No people in list");
@@ -296,15 +299,17 @@ namespace HumaneSociety
             else
             {
                 Console.WriteLine("Person List: ");
+                
                 for (int adopterIndex = 0; adopterIndex < runInterface.adopterList.Count; adopterIndex++)
                 {
-                    Console.WriteLine("{0}:{1}", runInterface.adopterList[adopterIndex].name);
+                    Console.WriteLine("{0}:{1}", runInterface.adopterList[adopterIndex].name, adopterIndex);
                 }
             }
         }
 
         public void RemovePerson()
         {
+
             if (runInterface.adopterList.Equals(null))
             {
                 Console.WriteLine("No people in list");

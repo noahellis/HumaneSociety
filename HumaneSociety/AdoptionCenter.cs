@@ -8,8 +8,7 @@ namespace HumaneSociety
 {
     class AdoptionCenter
     {
-        public Animal animalInterface;
-        public Person personInterface;
+       
         public List<Person> adopterList = new List<Person>();
         public List<CatCage> catCageList = new List<CatCage>(new CatCage[40]);
         public List<DogCage> dogCageList = new List<DogCage>(new DogCage[20]);

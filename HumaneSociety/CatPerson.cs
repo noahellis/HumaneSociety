@@ -9,8 +9,7 @@ namespace HumaneSociety
     class CatPerson : Person
     {
         Random catRandom = new Random();
-        bool likesCats;
-        bool hasCatAllergy;
+        
         public CatPerson()
         {
             

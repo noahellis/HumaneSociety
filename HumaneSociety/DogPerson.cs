@@ -87,7 +87,7 @@ namespace HumaneSociety
             }
             else if (choice.Equals("no", StringComparison.CurrentCultureIgnoreCase))
             {
-                //exit to selection screen
+                
             }
 
         }

@@ -19,14 +19,14 @@ namespace HumaneSociety
         public void StartInterface()
         {
             Console.WriteLine("Enter the number that corresponds with what you would like to do:");
-            Console.WriteLine("1: Enter new Animal for Adoption"); //done
-            Console.WriteLine("2: Enter new Adopting Person"); //done
+            Console.WriteLine("1: Enter new Animal for Adoption"); 
+            Console.WriteLine("2: Enter new Adopting Person"); 
             Console.WriteLine("3: Perform Adoption");
-            Console.WriteLine("4: Remove Adopting Person from list"); //doneish, need to make it print clearer info
-            Console.WriteLine("5: Check available Animal Container space");//done
-            Console.WriteLine("6: Check for weekly food needed");//done
-            Console.WriteLine("7: Print list of current Animals in Shelter");//done
-            Console.WriteLine("8: Exit Program"); //done
+            Console.WriteLine("4: Remove Adopting Person from list"); 
+            Console.WriteLine("5: Check available Animal Container space");
+            Console.WriteLine("6: Check for weekly food needed");
+            Console.WriteLine("7: Print list of current Animals in Shelter");
+            Console.WriteLine("8: Exit Program"); 
             activateInterface();
         }
 
